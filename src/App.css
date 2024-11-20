@@ -5,17 +5,70 @@
   text-align: center;
 }
 
+.tab-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background: #000;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.tab-button.active, .tab-button:hover {
+  background: rgb(231,196,66);
+  color: #010606
+}
+
+.error-message {
+  color: grey;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.span-text {
+  font-size: 1.5em; /* Adjust the size as needed */
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #000;
+  padding: 10px 22px;
+  background: #fff;
+  width: calc(2 * 86px + 4 * 22px); /* 2 times the button width + 4 times the padding */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.upload-section, .listing-section {
+  margin-bottom: 20px;
+}
+.upload-section h2, .listing-section h2 {
+  margin-bottom: 10px;
+}
+
 .logo {
-  height: 6em;
+
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em  rgb(231,196,66));
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #034a93);
 }
 
 @keyframes logo-spin {
@@ -39,4 +92,117 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.button1, .button2 {
+  border-radius: 4px;
+  background: #000;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: background 0.3s; /* Smooth transition */
+
+}
+
+.button1 {
+  justify-self: start;
+}
+.button2 {
+  justify-self: end;
+}
+
+.button1:hover, .button2:hover {
+  transition: all 0.2s ease-in-out;
+  background:  rgb(231,196,66);
+  color: #010606;
+}
+h1 {
+  font-size: 2.5rem; /* Adjust the size as needed */
+  color: #fff; /* Dark grey color for better readability */
+  font-weight: 700; /* Bold weight */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Space below the title */
+  position: relative; /* For positioning the underline */
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 80%; /* Adjust the width as needed */
+  height: 4px; /* Thickness of the underline */
+  background: #fff; /* Color of the underline */
+  margin: 10px auto 0; /* Center the underline and space from the text */
+}
+
+.list-boxes {
+  background-color: #000;
+  border-bottom: 1px solid #fff; /* White line between items */
+  padding: 10px;
+  cursor: pointer; /* Show pointer cursor for entire list box */
+  display: block; /* Make <li> act like a block-level element */
+}
+
+.list-boxes {
+  background-color: #000;
+  border-bottom: 1px solid #fff; /* White line between items */
+  padding: 10px;
+  cursor: pointer; /* Show pointer cursor */
+  display: block; /* Make <li> act like a block-level element */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  list-style: none; /* Remove bullet points if any */
+}
+
+.list-boxes:hover {
+  background:  rgb(231,196,66); /* Background color on hover */
+  color: #010606; /* Text color on hover */
+  transition: background 0.3s;
+
+}
+
+.list-boxes a {
+  color: inherit; /* Ensure the link inherits the color from <li> */
+  text-decoration: none; /* Remove underline from links inside <li> */
+  display: block; /* Make <a> fill the <li> */
+}
+
+
+
+
+
+.button {
+  border-radius: 4px;
+  background: #000;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right:10px;
+  transition: background 0.3s; /* Smooth transition */
+
+  &.active {
+    color:  #034a93;
+    
+  }
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background:  rgb(231,196,66);
+    color: #010606;
+    
+  }
+}
+
+.list-boxes:last-child {
+  border-bottom: none;
 }

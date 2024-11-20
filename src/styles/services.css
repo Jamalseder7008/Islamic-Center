@@ -1,0 +1,90 @@
+.services-page {
+    padding: 40px 20px;
+    font-family: "Roboto", sans-serif;
+
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: black;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+      /* styles for the services menu */
+  .services-menu {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping to the next line */
+    gap: 10px; /* adds space between menu items */
+    justify-content: center; /* centers items */
+    padding: 20px 0;
+    max-width: 100%; /* allows wrapping within the container */
+  }
+
+  .service-link {
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .service-link:hover {
+    background-color: rgb(231,196,66);
+  }
+
+  
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .service-item {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-item h2 {
+    font-size: 1.8em;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .service-item p {
+    font-size: 1em;
+    color: #000;
+    line-height: 1.6;
+  }
+  
+  .service-item button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #034a93;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .service-item button:hover {
+    background-color: rgb(231,196,66);
+  }
+  
+  .service-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #000;
+    line-height: 1.6;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+  }
+  

@@ -1,0 +1,80 @@
+.team-page {
+    padding: 40px 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .team-member {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member h2 {
+    font-size: 1.8em;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    font-size: 1em;
+    color: #000;
+    line-height: 1.6;
+  }
+  
+  .team-member button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: rgb(194, 168, 81);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .team-member button:hover {
+    background-color: rgb(81, 83, 194);
+  }
+  
+  .team-contact {
+    display: none;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #000;
+    line-height: 1.6;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+  }
+
+  .team-contact {
+    font-size: 1em;
+    color: #000;
+    line-height: 1.6;
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease; /* Smooth transition when toggling */
+  }
+  
+  .team-contact.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  
