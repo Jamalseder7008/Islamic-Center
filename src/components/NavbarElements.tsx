@@ -20,8 +20,12 @@ export const NavLogo = styled(Link)`
   align-items: center;
   justify-content: center;
   img {
-    height: 50px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    width: 100px;
     object-fit: contain;
+  }
+      @media screen and (min-width: 769px) {
+    display: none; /* Hide the logo on larger screens */
   }
 `;
 

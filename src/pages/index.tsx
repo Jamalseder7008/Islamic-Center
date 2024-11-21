@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import "../styles/Home.css";
 // import { View, Image } from "@aws-amplify/ui-react"; // Import necessary components from Amplify UI
-// import logo from "../assets/ICLogoOG.png"; // Adjust the path if necessary
+import logo from "../assets/ICLogoOG.png"; // Adjust the path if necessary
 import MapEmbed from "./MapEmbed.tsx"; // New Map component
 import PrayerTimes from "../components/PrayerTimes"; // Adjust the path if necessary
+import { View, Image } from "@aws-amplify/ui-react";
 
 const PageContainer = styled.div`
   padding: 0px 0px;
@@ -40,16 +41,13 @@ const LinkItem = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 
-  &:hover {
-    transform: scale(1.02);
-  }
 `;
 
-const LinkItemTitle = styled.h2`
-  font-size: 1.8em;
-  color: #000;
-  margin-bottom: 10px;
-`;
+// const LinkItemTitle = styled.h2`
+//   font-size: 1.8em;
+//   color: #000;
+//   margin-bottom: 10px;
+// `;
 
 const LinkItemParagraph = styled.p`
   font-size: 1rem;
@@ -70,8 +68,12 @@ const Home: React.FC = () => {
       {/* Links List Section */}
       <LinksList>
         <LinkItem>
-          <LinkItemTitle>Islamic Center of New Orleans</LinkItemTitle>
+          {/* <LinkItemTitle>Islamic Center of New Orleans</LinkItemTitle> */}
+          <View textAlign="center" padding="large">
+            <Image alt="Company Logo" src={logo} className="logo" />
+          </View>
           <PrayerTimes />
+          
           <LinkItemParagraph>
             The Islamic Center is a very well established masjid within the New Orleans Community.
             It is frequented by many locals for all five daily prayers
