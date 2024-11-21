@@ -1,6 +1,6 @@
 
 import React from "react";
-import { NavBtnLink } from "./NavbarElements";
+// import { NavBtnLink } from "./NavbarElements";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import "../styles/Home.css";
-import { View, Image } from "@aws-amplify/ui-react"; // Import necessary components from Amplify UI
-import logo from "../assets/ICLogoOG.png"; // Adjust the path if necessary
+// import { View, Image } from "@aws-amplify/ui-react"; // Import necessary components from Amplify UI
+// import logo from "../assets/ICLogoOG.png"; // Adjust the path if necessary
 import MapEmbed from "./MapEmbed.tsx"; // New Map component
 import PrayerTimes from "../components/PrayerTimes"; // Adjust the path if necessary
 
@@ -11,20 +11,20 @@ const PageContainer = styled.div`
   font-family: "Roboto", sans-serif;
 `;
 
-const Title = styled.h1`
-  text-align: center;
-  font-size: 2.5em;
-  color: #0c2b1e;
-  margin-bottom: 30px;
-  font-weight: 600;
-`;
+// const Title = styled.h1`
+//   text-align: center;
+//   font-size: 2.5em;
+//   color: #0c2b1e;
+//   margin-bottom: 30px;
+//   font-weight: 600;
+// `;
 
-const Subtitle = styled.p`
-  text-align: center;
-  font-size: 1.5rem;
-  color: #0c2b1e;
-  margin-bottom: 30px;
-`;
+// const Subtitle = styled.p`
+//   text-align: center;
+//   font-size: 1.5rem;
+//   color: #0c2b1e;
+//   margin-bottom: 30px;
+// `;
 
 const LinksList = styled.div`
   display: flex;
