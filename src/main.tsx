@@ -11,13 +11,14 @@ import Footer from './components/Footer.tsx';
 import Home from "./pages/index.tsx";
 import Services from "./pages/services.tsx"
 import Team from "./pages/team.tsx";
-import FinancialTools from "./pages/FinancialTools.tsx";
+// import FinancialTools from "./pages/FinancialTools.tsx";
 import ImportantLinks from "./pages/ImportantLinks.tsx";
 import ImportantDates from "./pages/ImportantDates.tsx";
 import './index.css';
 import './App.css'; // Optional: Add global styles
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
+import QuranLessons from "./pages/QuranLessons.tsx";
 
 Amplify.configure(outputs);
 
@@ -29,7 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} /> 
         <Route path="/team" element={<Team />} />
-        <Route path="/FinancialTools" element={<FinancialTools />} />
+        <Route path="/QuranLessons" element={<QuranLessons />} />
         <Route path="/ImportantLinks" element={<ImportantLinks />} />
         <Route path="/ImportantDates" element={<ImportantDates />} />
         <Route path="/app" element={<App />} /> {/* Add this route if you need the App component */}

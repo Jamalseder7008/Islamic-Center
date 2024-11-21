@@ -20,6 +20,7 @@ const Navbar: React.FC = () => {
       </NavLogo>
       <Bars onClick={toggleMenu} />
       <NavMenu $isOpen={isOpen}>
+
         <NavBtnLink 
           to="/" 
           className={({ isActive }) => (isActive ? 'active' : '')}
@@ -27,12 +28,21 @@ const Navbar: React.FC = () => {
         >
           Home
         </NavBtnLink>
+
         <NavBtnLink 
           to="/services" 
           className={({ isActive }) => (isActive ? 'active' : '')}
           onClick={closeMenu}
         >
           Services
+        </NavBtnLink>
+
+        <NavBtnLink 
+          to="/QuranLessons" 
+          className={({ isActive }) => (isActive ? 'active' : '')}
+          onClick={closeMenu}
+        >
+          Quran Lessons
         </NavBtnLink>
         
 

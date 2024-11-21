@@ -1,0 +1,23 @@
+.quran-lessons-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .quran-classes-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .quran-classes-schedule th,
+  .quran-classes-schedule td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .quran-classes-schedule th {
+    background-color: #f4f4f4;
+  }
+  
