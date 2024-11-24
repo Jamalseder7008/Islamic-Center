@@ -47,6 +47,10 @@ const Credits = styled.p`
   font-size: 1rem;
 `;
 
+const WebLink = styled.a`
+  color: gold;
+`
+
 const Footer: React.FC = () => {
 
   return (
@@ -64,7 +68,7 @@ const Footer: React.FC = () => {
 
 
         <Credits>
-          Website built by Seder Tech
+          Website built by <WebLink href="https://www.sedertech.com/">Seder Tech</WebLink>
         </Credits>
       </FooterContent>
     </FooterContainer>
