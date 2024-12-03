@@ -26,7 +26,7 @@ const PrayerTime = styled.div`
 
 const PrayerTimes: React.FC = () => {
   const times = {
-    Fajr: "5:45 AM",
+    Fajr: "6:00 AM",
     Dhuhr: "1:00 PM",
     Asr: "3:30 PM",
     Maghrib: "Sunset",
