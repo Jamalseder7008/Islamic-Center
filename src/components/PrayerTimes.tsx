@@ -11,38 +11,20 @@ const PrayerTimesContainer = styled.div`
   text-align: center;
 `;
 
-const PrayerTitle = styled.h3`
-  font-size: 1.8em;
-  color: #0c2b1e;
-  margin-bottom: 20px;
-`;
 
-const PrayerTime = styled.div`
-  font-size: 1.2rem;
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
-`;
 
 const PrayerTimes: React.FC = () => {
-  const times = {
-    Fajr: "6:30 AM",
-    Dhuhr: "2:00 PM",
-    Asr: "5:45 PM",
-    Maghrib: "Sunset",
-    Isha: "9:15 PM",
-    Jummah: "2:00 PM" 
-  };
+
 
   return (
     <PrayerTimesContainer>
-      <PrayerTitle>Prayer Iqama Times</PrayerTitle>
-      {Object.entries(times).map(([prayer, time]) => (
-        <PrayerTime key={prayer}>
-          <span>{prayer}</span>
-          <span>{time}</span>
-        </PrayerTime>
-      ))}
+      <iframe
+        src="https://timing.athanplus.com/masjid/widgets/embed?theme=1&masjid_id=wLVzbDLJ"
+        width="100%"
+        height="615"
+        frameBorder="0"
+        allowTransparency={true}
+      ></iframe>
     </PrayerTimesContainer>
   );
 };

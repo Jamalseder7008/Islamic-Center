@@ -5,7 +5,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import App from "./App.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Footer from './components/Footer.tsx';
 import Home from "./pages/index.tsx";
@@ -33,7 +32,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/QuranLessons" element={<QuranLessons />} />
         <Route path="/ImportantLinks" element={<ImportantLinks />} />
         <Route path="/ImportantDates" element={<ImportantDates />} />
-        <Route path="/app" element={<App />} /> {/* Add this route if you need the App component */}
       </Routes>
       <Footer /> 
     </Router>
