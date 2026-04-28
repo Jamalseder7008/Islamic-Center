@@ -5,20 +5,17 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-// import App from "./App.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Footer from './components/Footer.tsx';
 import Home from "./pages/index.tsx";
-import Services from "./pages/services.tsx"
-import Team from "./pages/team.tsx";
-// import FinancialTools from "./pages/FinancialTools.tsx";
+import Services from "./pages/services.tsx";
 import ImportantLinks from "./pages/ImportantLinks.tsx";
-import ImportantDates from "./pages/ImportantDates.tsx";
 import './index.css';
-import './App.css'; // Optional: Add global styles
+import './App.css';
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
 import QuranLessons from "./pages/QuranLessons.tsx";
+import Donate from "./pages/Donate.tsx";
 
 Amplify.configure(outputs);
 
@@ -28,14 +25,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} /> 
-        <Route path="/team" element={<Team />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/QuranLessons" element={<QuranLessons />} />
         <Route path="/ImportantLinks" element={<ImportantLinks />} />
-        <Route path="/ImportantDates" element={<ImportantDates />} />
-        {/* <Route path="/app" element={<App />} /> Add this route if you need the App component */}
+        <Route path="/donate" element={<Donate />} />
       </Routes>
-      <Footer /> 
+      <Footer />
     </Router>
   </React.StrictMode>
 );

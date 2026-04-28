@@ -28,6 +28,7 @@ const QuranLessons: React.FC = () => {
         <li><strong>Understanding (Tafseer):</strong> Gain deeper insights into the meanings of the verses.</li>
       </ul>
       <h2>Class Details</h2>
+      <div style={{ overflowX: "auto" }}>
       <table className="quran-classes-schedule">
         <thead>
           <tr>
@@ -58,6 +59,7 @@ const QuranLessons: React.FC = () => {
           </tr>
         </tbody>
       </table>
+      </div>
       <h2>Registration</h2>
       <p>
         To register for Qur'an classes, please visit our Islamic Center.

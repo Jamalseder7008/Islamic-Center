@@ -1,92 +1,147 @@
 import React from "react";
 import styled from "styled-components";
 import "../styles/Home.css";
-// import { View, Image } from "@aws-amplify/ui-react"; // Import necessary components from Amplify UI
-import logo from "../assets/ICLogoOG.png"; // Adjust the path if necessary
-import MapEmbed from "./MapEmbed.tsx"; // New Map component
-import PrayerTimes from "../components/PrayerTimes"; // Adjust the path if necessary
-import { View, Image } from "@aws-amplify/ui-react";
+import logo from "../assets/ICLogoOG.png";
+import MapEmbed from "./MapEmbed.tsx";
+import PrayerTimes from "../components/PrayerTimes";
 
 const PageContainer = styled.div`
-  padding: 0px 0px;
   font-family: "Roboto", sans-serif;
-`;
-
-// const Title = styled.h1`
-//   text-align: center;
-//   font-size: 2.5em;
-//   color: #0c2b1e;
-//   margin-bottom: 30px;
-//   font-weight: 600;
-// `;
-
-// const Subtitle = styled.p`
-//   text-align: center;
-//   font-size: 1.5rem;
-//   color: #0c2b1e;
-//   margin-bottom: 30px;
-// `;
-
-const LinksList = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
 `;
 
-const LinkItem = styled.div`
-  padding: 25px;
-  border: 1px solid #e0e0e0;
+const HeroSection = styled.div`
   background-color: #ffffff;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-
+  border: 1px solid #e4e4e4;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 32px 24px 24px;
+  text-align: center;
 `;
 
-// const LinkItemTitle = styled.h2`
-//   font-size: 1.8em;
-//   color: #000;
-//   margin-bottom: 10px;
-// `;
+const MasjidName = styled.h2`
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 6px 0;
+  text-align: center;
+  &::after { display: none; }
+`;
 
-const LinkItemParagraph = styled.p`
+const MasjidTagline = styled.p`
   font-size: 1rem;
-  color: #000;
-  line-height: 1.6;
+  color: #555;
+  line-height: 1.65;
+  max-width: 560px;
+  margin: 0 auto 28px;
 `;
 
-const StyledMapEmbed = styled.div`
-  margin-top: 60px;
+const LogoImg = styled.img`
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 16px;
+  transition: filter 300ms;
+  &:hover {
+    filter: drop-shadow(0 0 12px rgba(231, 196, 66, 0.6));
+  }
+  @media (max-width: 480px) {
+    height: 110px;
+  }
 `;
 
+const AnnouncementsGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const AnnouncementCard = styled.div`
+  background-color: #1e3a8a;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  border-left: 4px solid #15803d;
+  text-align: left;
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: gold;
+    margin: 0 0 6px 0;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #dde8f5;
+  }
+`;
+
+const PrayerSection = styled.div`
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 28px 24px;
+`;
+
+const SectionTitle = styled.h2`
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 16px 0;
+  text-align: center;
+  &::after { display: none; }
+`;
 
 const Home: React.FC = () => {
   return (
     <PageContainer>
-      {/* Title and Subtitle */}
 
-      {/* Links List Section */}
-      <LinksList>
-        <LinkItem>
-          {/* <LinkItemTitle>Islamic Center of New Orleans</LinkItemTitle> */}
-          <View textAlign="center" padding="large">
-            <Image alt="Company Logo" src={logo} className="logo" />
-          </View>
-          <PrayerTimes />
-          
-          <LinkItemParagraph>
-            The Islamic Center is a very well established masjid within the New Orleans Community.
-            It is frequented by many locals for all five daily prayers
-          </LinkItemParagraph>
-        </LinkItem>
+      {/* Hero — logo, name, tagline, announcements */}
+      <HeroSection>
+        <LogoImg src={logo} alt="Islamic Center of New Orleans logo" className="logo" />
+        <MasjidName>Islamic Center of New Orleans</MasjidName>
+        <MasjidTagline>
+          A welcoming masjid serving the New Orleans community with daily prayers,
+          education, and spiritual support for all Muslims.
+        </MasjidTagline>
 
-        {/* Additional link items can be added here */}
-      </LinksList>
+        <AnnouncementsGrid>
+          <AnnouncementCard>
+            <h3>Jumu'ah Khutbah</h3>
+            <p>
+              Friday Khutbah begins at{" "}
+              <strong style={{ color: "gold" }}>1:30 PM</strong> every week.
+              Join us for congregational Jumu'ah prayer.
+            </p>
+          </AnnouncementCard>
+          <AnnouncementCard>
+            <h3>Saturday Night Gathering</h3>
+            <p>
+              Brothers are invited every{" "}
+              <strong style={{ color: "gold" }}>
+                Saturday night between Maghrib and Isha
+              </strong>{" "}
+              for knowledge, community, and brotherhood.
+            </p>
+          </AnnouncementCard>
+        </AnnouncementsGrid>
+      </HeroSection>
 
-      {/* Map Embed Section */}
-      <StyledMapEmbed>
-        <MapEmbed />
-      </StyledMapEmbed>
+      {/* Prayer times widget */}
+      <PrayerSection>
+        <SectionTitle>Today's Prayer Times</SectionTitle>
+        <PrayerTimes />
+      </PrayerSection>
+
+      {/* Map */}
+      <MapEmbed />
 
     </PageContainer>
   );

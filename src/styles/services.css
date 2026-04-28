@@ -1,90 +1,151 @@
 .services-page {
-    padding: 40px 20px;
-    font-family: "Roboto", sans-serif;
+  padding: 40px 20px;
+  font-family: "Roboto", sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: black;
-    margin-bottom: 30px;
-    font-weight: 600;
-  }
-  
-      /* styles for the services menu */
-  .services-menu {
-    display: flex;
-    flex-wrap: wrap; /* allows wrapping to the next line */
-    gap: 10px; /* adds space between menu items */
-    justify-content: center; /* centers items */
-    padding: 20px 0;
-    max-width: 100%; /* allows wrapping within the container */
-  }
+.services-page h1 {
+  color: #1e3a8a;
+}
 
-  .service-link {
-    text-decoration: none;
-    color: black;
-    padding: 8px 16px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
+.services-subtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #444;
+  margin: -16px 0 32px 0;
+  line-height: 1.6;
+}
 
-  .service-link:hover {
-    background-color: rgb(231,196,66);
-  }
+/* Pill navigation */
+.services-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 0 0 36px 0;
+}
 
-  
-  .services-list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.service-nav-pill {
+  text-decoration: none;
+  color: #1e3a8a;
+  padding: 5px 14px;
+  background-color: #f0f7f4;
+  border: 1px solid #1e3a8a;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.service-nav-pill:hover {
+  background-color: #1e3a8a;
+  color: #fff;
+}
+
+/* 2-column card grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .service-item {
-    padding: 25px;
-    border: 1px solid #e0e0e0;
-    background-color: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-item h2 {
-    font-size: 1.8em;
-    color: #000;
-    margin-bottom: 10px;
-  }
-  
-  .service-item p {
-    font-size: 1em;
-    color: #000;
-    line-height: 1.6;
-  }
-  
-  .service-item button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #034a93;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .service-item button:hover {
-    background-color: rgb(231,196,66);
-  }
-  
-  .service-details {
-    display: none;
-    margin-top: 15px;
-    font-size: 0.9em;
-    color: #000;
-    line-height: 1.6;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 15px;
-  }
-  
+}
+
+/* Individual card */
+.service-card {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 24px rgba(12, 43, 30, 0.13);
+  transform: translateY(-3px);
+}
+
+/* Icon badge */
+.service-card-icon {
+  width: 46px;
+  height: 46px;
+  background-color: #1e3a8a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: gold;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.service-card h2 {
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.service-card-desc {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.65;
+  margin: 0 0 16px 0;
+  flex: 1;
+}
+
+/* Chevron toggle button */
+.service-card-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #15803d;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.service-card-toggle:hover {
+  color: rgb(194, 168, 81);
+  background: none;
+  border-color: transparent;
+}
+
+.service-card-toggle:focus,
+.service-card-toggle:focus-visible {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Expandable details */
+.service-card-details {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #ebebeb;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.75;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

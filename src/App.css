@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
 .tab-container {
   display: flex;
   margin-top: 20px;
@@ -124,21 +130,23 @@
   color: #010606;
 }
 h1 {
-  font-size: 2.5rem; /* Adjust the size as needed */
-  color: #000; /* Dark grey color for better readability */
-  font-weight: 700; /* Bold weight */
-  text-align: center; /* Center the text */
-  margin-bottom: 20px; /* Space below the title */
-  position: relative; /* For positioning the underline */
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  letter-spacing: -0.5px;
 }
 
 h1::after {
   content: "";
   display: block;
-  width: 80%; /* Adjust the width as needed */
-  height: 4px; /* Thickness of the underline */
-  background: #000; /* Color of the underline */
-  margin: 10px auto 0; /* Center the underline and space from the text */
+  width: 60px;
+  height: 4px;
+  background: #15803d;
+  border-radius: 2px;
+  margin: 10px auto 0;
 }
 
 .list-boxes {
@@ -161,8 +169,8 @@ h1::after {
 }
 
 .list-boxes:hover {
-  background:  rgb(231,196,66); /* Background color on hover */
-  color: #010606; /* Text color on hover */
+  background: #1e3a8a;
+  color: #ffffff;
   transition: background 0.3s;
 
 }
