@@ -18,6 +18,45 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
+.donate-portal-btn {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.35);
+  transition: background 0.2s ease, transform 0.15s ease;
+  margin-bottom: 28px;
+}
+
+.donate-portal-btn:hover {
+  background: #162d6e;
+  transform: translateY(-2px);
+}
+
+.donate-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.donate-divider::before,
+.donate-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e0e0e0;
+}
+
 .donate-methods {
   display: flex;
   flex-direction: column;

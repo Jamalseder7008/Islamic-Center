@@ -26,6 +26,19 @@ const Donate: React.FC = () => {
         </p>
       </div>
 
+      <a
+        href="https://payments.madinaapps.com/icnola"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="donate-portal-btn"
+      >
+        Donate Online via Donation Portal
+      </a>
+
+      <div className="donate-divider">
+        <span>or donate directly via</span>
+      </div>
+
       <div className="donate-methods">
 
         <div className="donate-card">
