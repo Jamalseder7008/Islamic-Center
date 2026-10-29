@@ -12,12 +12,8 @@ import Services from "./pages/services.tsx";
 import ImportantLinks from "./pages/ImportantLinks.tsx";
 import './index.css';
 import './App.css';
-import { Amplify } from "aws-amplify";
-import outputs from "../amplify_outputs.json";
 import QuranLessons from "./pages/QuranLessons.tsx";
 import Donate from "./pages/Donate.tsx";
-
-Amplify.configure(outputs);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
